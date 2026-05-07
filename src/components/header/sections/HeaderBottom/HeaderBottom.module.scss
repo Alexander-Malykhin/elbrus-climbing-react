@@ -1,0 +1,39 @@
+@use '../../../../scss/settings/colors' as *;
+@use '../../../../scss/settings/functions' as *;
+
+.bottom {
+  padding: rem(22) 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: rem(10);
+
+  &__information {
+    display: flex;
+    align-items: flex-end;
+    gap: rem(20);
+  }
+
+  &__text {
+    max-width: 100%;
+
+    color: $white;
+  }
+
+  &__text_accent {
+    color: $main-green;
+  }
+
+  @media (max-width: rem(1280)) {
+    &__text {
+      display: none;
+    }
+  }
+
+  @media (max-width: rem(700)) {
+    &__information {
+      display: none;
+    }
+  }
+}

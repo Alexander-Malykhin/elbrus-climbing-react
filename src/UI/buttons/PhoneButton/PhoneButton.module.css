@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.phone {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+.phone:hover {
+  opacity: 0.85;
+}
+@media (max-width: 52.125rem) {
+  .phone {
+    padding-right: 1.875rem;
+  }
+}
+
+/*# sourceMappingURL=PhoneButton.module.css.map */

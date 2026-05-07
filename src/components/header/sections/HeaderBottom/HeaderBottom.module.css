@@ -1,0 +1,31 @@
+.bottom {
+  padding: 1.375rem 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.625rem;
+}
+.bottom__information {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+}
+.bottom__text {
+  max-width: 100%;
+  color: #FFFFFF;
+}
+.bottom__text_accent {
+  color: #4DD2A3;
+}
+@media (max-width: 80rem) {
+  .bottom__text {
+    display: none;
+  }
+}
+@media (max-width: 43.75rem) {
+  .bottom__information {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=HeaderBottom.module.css.map */

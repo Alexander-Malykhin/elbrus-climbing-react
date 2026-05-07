@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.button {
+  display: none;
+}
+.button__line {
+  height: 0.0625rem;
+  background: #FFFFFF;
+}
+@media (max-width: 52.125rem) {
+  .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 1.875rem;
+    height: 1.125rem;
+  }
+}
+@media (max-width: 43.75rem) {
+  .button__line {
+    background: #222222;
+  }
+}
+
+/*# sourceMappingURL=BurgerButton.module.css.map */

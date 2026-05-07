@@ -1,0 +1,46 @@
+@use '../../scss/settings/colors' as *;
+@use '../../scss/settings/functions' as *;
+
+.rating {
+  display: flex;
+  align-items: flex-end;
+  gap: rem(4);
+  height: rem(48);
+
+  &__item {
+    display: block;
+    width: rem(11);
+    border: rem(1) solid $white;
+    border-radius: rem(1.5);
+
+    &:nth-child(1) {
+      height: rem(11);
+    }
+
+    &:nth-child(2) {
+      height: rem(20);
+    }
+
+    &:nth-child(3) {
+      height: rem(28);
+    }
+  }
+
+  &_level_1 {
+    .rating__item:nth-child(-n + 1) {
+      background-color: $white;
+    }
+  }
+
+  &_level_2 {
+    .rating__item:nth-child(-n + 2) {
+      background-color: $white;
+    }
+  }
+
+  &_level_3 {
+    .rating__item:nth-child(-n + 3) {
+      background-color: $white;
+    }
+  }
+}

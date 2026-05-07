@@ -1,0 +1,213 @@
+@use '../../settings/fonts' as *;
+@use '../../settings/colors' as *;
+@use '../../settings/functions' as *;
+@use '../../settings/mixins' as *;
+
+.header-top {
+  padding-top: rem(30);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(40);
+
+  &__logo-link {
+    display: block;
+    width: clamp(rem(60), 10vw, rem(100));
+    flex-shrink: 0;
+  }
+
+  &__logo {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+
+  &__callback {
+    @include fz-16($fw-medium);
+    color: $main-green;
+
+    transition: 0.3s all ease-in-out;
+
+    &:hover {
+      @include green-hover;
+    }
+  }
+
+  &__nav-link {
+    @include fz-16($fw-medium);
+
+    color: $white;
+    text-decoration: none;
+
+    transition: opacity .3s ease-in-out;
+
+    &:hover {
+      opacity: .85;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(22);
+  }
+
+  &__mobile-actions {
+    display: none;
+  }
+
+  &__icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: rem(20);
+    height: rem(20);
+
+    padding: 0;
+    border: 0;
+
+    background: transparent;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__language {
+    width: rem(22);
+    height: rem(22);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+
+    background: transparent;
+
+    @include fz-12($fw-regular);
+    color: $white;
+
+    cursor: pointer;
+  }
+
+  &__currency {
+    position: relative;
+  }
+
+  &__currency-select {
+    min-width: rem(68);
+    height: rem(22);
+
+    padding: rem(2) rem(15);
+
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+
+    background: transparent;
+    color: $white;
+
+    appearance: none;
+    cursor: pointer;
+    outline: none;
+
+    @include fz-12($fw-regular);
+
+    .header-top__currency-option {
+      color: $main-green;
+      background: $white;
+    }
+  }
+
+  &__currency::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: rem(15);
+
+    width: rem(6);
+    height: rem(6);
+
+    border-right: rem(1.5) solid $white;
+    border-bottom: rem(1.5) solid $white;
+
+    transform: translateY(-70%) rotate(45deg);
+
+    pointer-events: none;
+  }
+
+  @media (max-width: rem(1024)) {
+    gap: rem(20);
+
+    &__panel {
+      gap: rem(20);
+    }
+
+    &__nav {
+      gap: rem(16);
+    }
+
+    &__actions {
+      gap: rem(16);
+    }
+  }
+
+  //ADAPTIVE
+  @media (max-width: rem(834)) {
+    &__nav-link--desktop-only {
+      display: none;
+    }
+
+    &__nav-link--phone {
+      padding-right: rem(30);
+    }
+
+    &__mobile-actions {
+      display: flex;
+      align-items: center;
+      gap: rem(24);
+
+      padding-left: rem(30);
+    }
+  }
+
+  @media (max-width: rem(700)) {
+    padding: rem(10) 0;
+    background-color: $white;
+
+    &__actions {
+      display: none;
+    }
+
+    &__nav {
+      display: none;
+    }
+
+    &__logo {
+      content: url("/images/logo/logo-black.svg");
+    }
+
+    &__icon {
+      content: url("/images/chat/chat-black.svg");
+    }
+  }
+}

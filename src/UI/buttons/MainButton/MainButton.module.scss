@@ -1,0 +1,18 @@
+@use '../../../scss/settings/fonts' as *;
+@use '../../../scss/settings/colors' as *;
+@use '../../../scss/settings/functions' as *;
+@use '../../../scss/settings/mixins' as *;
+
+.button {
+  @include fz-16($fw-regular);
+
+  padding: clamp(rem(9), 1vw, rem(10.5)) clamp(rem(16), 1vw, rem(29.5));
+  background-color: $main-green;
+  color: $white;
+  border-radius: rem(4);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    @include green-bg-hover;
+  }
+}

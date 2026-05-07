@@ -1,0 +1,62 @@
+@use 'colors' as *;
+@use '../settings/functions' as *;
+
+@mixin green-hover {
+  color: $main-green-hover;
+}
+
+@mixin green-bg-hover {
+  background: $main-green-hover;
+}
+
+@mixin green-accent {
+  color: $main-green;
+}
+
+
+@mixin rating-bars(
+  $color,
+  $height: rem(48),
+  $bar-width: rem(11),
+  $gap: rem(4),
+  $bar-1: rem(11),
+  $bar-2: rem(20),
+  $bar-3: rem(28),
+  $item-selector: '.rating-bars__item'
+) {
+  display: flex;
+  align-items: flex-end;
+  gap: $gap;
+  height: $height;
+
+  #{$item-selector} {
+    display: block;
+    width: $bar-width;
+    border: rem(1) solid $color;
+    border-radius: rem(1.5);
+  }
+
+  #{$item-selector}:nth-child(1) {
+    height: $bar-1;
+  }
+
+  #{$item-selector}:nth-child(2) {
+    height: $bar-2;
+  }
+
+  #{$item-selector}:nth-child(3) {
+    height: $bar-3;
+  }
+
+  &.is-level-1 #{$item-selector}:nth-child(-n + 1),
+  &.is-level-2 #{$item-selector}:nth-child(-n + 2),
+  &.is-level-3 #{$item-selector}:nth-child(-n + 3) {
+    background-color: $color;
+  }
+}
+
+@mixin layout-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(6);
+}

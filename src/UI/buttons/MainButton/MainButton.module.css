@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.button {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: clamp(0.5625rem, 1vw, 0.65625rem) clamp(1rem, 1vw, 1.84375rem);
+  background-color: #4DD2A3;
+  color: #FFFFFF;
+  border-radius: 0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+.button:hover {
+  background: #2BBF8B;
+}
+
+/*# sourceMappingURL=MainButton.module.css.map */

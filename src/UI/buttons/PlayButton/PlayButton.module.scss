@@ -1,0 +1,36 @@
+@use '../../../scss/settings/fonts' as *;
+@use '../../../scss/settings/colors' as *;
+@use '../../../scss/settings/functions' as *;
+
+.button {
+  position: relative;
+
+  margin-top: clamp(rem(4), 4vw, rem(50));
+
+  width: clamp(rem(70), 8vw, rem(83));
+  height: clamp(rem(70), 8vw, rem(83));
+
+  border: rem(1) solid $white;
+  border-radius: 50%;
+
+  background-color: rgba($white, 0.25);
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+
+    width: 0;
+    height: 0;
+
+    border-top: rem(15) solid transparent;
+    border-bottom: rem(15) solid transparent;
+    border-left: rem(25) solid $white;
+
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: rem(700)) {
+    display: none;
+  }
+}

@@ -1,0 +1,129 @@
+@use '../../scss/settings/fonts' as *;
+@use '../../scss/settings/colors' as *;
+@use '../../scss/settings/functions' as *;
+@use '../../scss/settings/mixins' as *;
+
+.tours {
+  position: relative;
+
+  &__dropdown {
+    position: absolute;
+    top: calc(100% + #{rem(22)});
+    left: 0;
+    z-index: 50;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(rem(8));
+
+    transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease,
+            transform 0.2s ease;
+  }
+
+  &__dropdown_open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &__categories,
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: $white;
+  }
+
+  &__categories {
+    width: rem(170);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__category {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: rem(44);
+    padding: 0 rem(15);
+
+
+    border: 0;
+    border-bottom: rem(1) solid rgba($gray, 0.25);
+    background: $white;
+
+    color: $black;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+
+    &__arrow {
+      width: rem(8);
+      height: rem(8);
+
+      border-right: rem(2) solid currentColor;
+      border-bottom: rem(2) solid currentColor;
+
+      transform: rotate(45deg);
+      transition: transform 0.25s ease;
+    }
+
+    &:hover {
+      color: $main-green;
+    }
+  }
+
+  &__category_active {
+    color: $main-green;
+
+    .tours__category__arrow {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__content {
+    position: absolute;
+    left: calc(100% + #{rem(4)});
+    top: 0;
+
+    width: rem(300);
+    background: $white;
+  }
+
+  &__list {
+    display: block;
+
+    &_item {
+      border-bottom: rem(1) solid rgba($gray, 0.25);
+    }
+
+    &_link {
+      display: flex;
+      align-items: center;
+
+      min-height: rem(44);
+      padding: 0 rem(20);
+
+      color: $black;
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $main-green;
+      }
+    }
+  }
+
+  @media (max-width: rem(840)) {
+    display: none;
+  }
+}

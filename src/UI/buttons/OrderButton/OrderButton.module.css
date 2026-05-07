@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.button {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #4DD2A3;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+.button:hover {
+  color: #2BBF8B;
+}
+
+/*# sourceMappingURL=OrderButton.module.css.map */

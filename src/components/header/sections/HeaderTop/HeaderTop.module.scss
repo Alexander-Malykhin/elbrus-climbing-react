@@ -1,0 +1,69 @@
+@use '../../../../scss/settings/colors' as *;
+@use '../../../../scss/settings/functions' as *;
+
+.top {
+  padding-top: rem(30);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(40);
+
+  &__panel {
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: rem(24);
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(22);
+  }
+
+  &__mobile_actions {
+    display: none;
+  }
+
+  @media (max-width: rem(1024)) {
+    gap: rem(20);
+
+    &__panel {
+      gap: rem(20);
+    }
+
+    &__nav {
+      gap: rem(16);
+    }
+
+    &__actions {
+      gap: rem(16);
+    }
+  }
+
+  @media (max-width: rem(834)) {
+    &__mobile_actions {
+      display: flex;
+      align-items: center;
+      gap: rem(24);
+
+      padding-left: rem(30);
+    }
+  }
+
+  @media (max-width: rem(700)) {
+    padding: rem(10) 0;
+    background-color: $white;
+
+    &__actions,
+    &__nav {
+      display: none;
+    }
+  }
+}

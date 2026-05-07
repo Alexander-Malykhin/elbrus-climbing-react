@@ -1,0 +1,49 @@
+@use '../../../scss/settings/fonts' as *;
+@use '../../../scss/settings/colors' as *;
+@use '../../../scss/settings/functions' as *;
+
+.container {
+  position: relative;
+  display: inline-block;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: rem(15);
+
+    width: rem(6);
+    height: rem(6);
+
+    border-right: rem(1.5) solid $white;
+    border-bottom: rem(1.5) solid $white;
+
+    transform: translateY(-70%) rotate(45deg);
+    pointer-events: none;
+  }
+}
+
+.select {
+  min-width: rem(68);
+  height: rem(22);
+
+  padding: rem(2) rem(28) rem(2) rem(15);
+
+  border: rem(1) solid $white;
+  border-radius: rem(4);
+
+  background: transparent;
+  color: $white;
+
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+
+  @include fz-12($fw-regular);
+
+  &__item {
+    color: $main-green;
+    background: $white;
+  }
+}

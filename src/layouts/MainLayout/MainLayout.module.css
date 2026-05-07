@@ -1,0 +1,6 @@
+.container {
+  width: min(100% - var(--container-gutter), var(--container-max-width));
+  margin-inline: auto;
+}
+
+/*# sourceMappingURL=MainLayout.module.css.map */

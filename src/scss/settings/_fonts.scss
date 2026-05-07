@@ -1,0 +1,108 @@
+@use 'functions' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+$ff-inter: 'Inter', sans-serif;
+
+// font sizes
+$fz-12: rem(12);
+$fz-14: rem(14);
+$fz-16: rem(16);
+$fz-18: rem(18);
+$fz-20: rem(20);
+$fz-22: rem(22);
+$fz-24: rem(24);
+$fz-26: rem(26);
+$fz-28: rem(28);
+$fz-30: rem(30);
+$fz-32: rem(32);
+$fz-34: rem(34);
+$fz-36: rem(36);
+$fz-38: rem(38);
+$fz-40: rem(40);
+$fz-42: rem(42);
+$fz-44: rem(44);
+$fz-45: rem(45);
+
+// font weights
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
+
+// base mixin
+@mixin font($size, $weight: $fw-regular, $letter-spacing: 0) {
+  font-family: $ff-inter;
+  font-size: $size;
+  font-weight: $weight;
+  letter-spacing: $letter-spacing;
+}
+
+// size mixins
+@mixin fz-12($weight: $fw-regular) { @include font($fz-12, $weight); }
+@mixin fz-14($weight: $fw-regular) { @include font($fz-14, $weight); }
+@mixin fz-16($weight: $fw-regular) { @include font($fz-16, $weight); }
+@mixin fz-18($weight: $fw-regular) { @include font($fz-18, $weight); }
+@mixin fz-20($weight: $fw-regular) { @include font($fz-20, $weight); }
+@mixin fz-22($weight: $fw-regular) { @include font($fz-22, $weight); }
+@mixin fz-24($weight: $fw-regular) { @include font($fz-24, $weight); }
+@mixin fz-26($weight: $fw-regular) { @include font($fz-26, $weight); }
+@mixin fz-28($weight: $fw-regular) { @include font($fz-28, $weight); }
+@mixin fz-30($weight: $fw-regular) { @include font($fz-30, $weight); }
+@mixin fz-32($weight: $fw-regular) { @include font($fz-32, $weight); }
+@mixin fz-34($weight: $fw-regular) { @include font($fz-34, $weight); }
+@mixin fz-36($weight: $fw-regular) { @include font($fz-36, $weight); }
+@mixin fz-38($weight: $fw-regular) { @include font($fz-38, $weight); }
+@mixin fz-40($weight: $fw-regular) { @include font($fz-40, $weight); }
+@mixin fz-42($weight: $fw-regular) { @include font($fz-42, $weight); }
+@mixin fz-44($weight: $fw-regular) { @include font($fz-44, $weight); }
+@mixin fz-45($weight: $fw-regular) { @include font($fz-45, $weight); }
+
+// semantic mixins
+@mixin title-xl {
+  @include fz-45($fw-bold);
+}
+
+@mixin title-xm {
+  @include fz-30($fw-bold);
+}
+
+@mixin title-hero {
+  font-family: $ff-inter;
+  font-size: clamp(rem(35), 4vw, rem(45));
+  font-weight: $fw-bold;
+}
+
+@mixin title-hero-mobile {
+  @include fz-20($fw-bold);
+}
+
+@mixin title-lg {
+  @include fz-24($fw-semi-bold);
+}
+
+@mixin title-guide {
+  @include fz-20($fw-regular);
+}
+
+
+@mixin title-md {
+  @include fz-16($fw-semi-bold);
+}
+
+@mixin text-base {
+  @include fz-16($fw-regular);
+}
+
+@mixin text-medium {
+  @include fz-16($fw-medium);
+}
+
+@mixin text-sm {
+  @include fz-12($fw-regular);
+}
+
+@mixin header-stat-value {
+  @include fz-40($fw-extra-bold);
+}

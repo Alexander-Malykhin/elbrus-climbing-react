@@ -1,0 +1,17 @@
+@use '../../scss/settings/functions' as *;
+
+.logo {
+  display: block;
+  width: clamp(rem(60), 10vw, rem(100));
+  flex-shrink: 0;
+
+  &_link {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: rem(700)) {
+    content: url('../../images/logo/logo-black.svg');
+  }
+}

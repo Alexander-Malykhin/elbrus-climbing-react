@@ -1,0 +1,7 @@
+@use '../../scss/settings/functions' as *;
+@use '../../scss/settings/containers' as *;
+
+.container {
+  width: min(100% - var(--container-gutter), var(--container-max-width));
+  margin-inline: auto;
+}

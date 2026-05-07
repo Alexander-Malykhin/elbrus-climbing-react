@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.messengers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2.875rem;
+}
+.messengers__text {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  max-width: 3.375rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+.messengers__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+.messengers__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9375rem;
+  height: 1.9375rem;
+}
+.messengers__icon {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 43.75rem) {
+  .messengers {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=Messengers.module.css.map */

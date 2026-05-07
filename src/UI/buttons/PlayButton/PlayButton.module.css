@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.button {
+  position: relative;
+  margin-top: clamp(0.25rem, 4vw, 3.125rem);
+  width: clamp(4.375rem, 8vw, 5.1875rem);
+  height: clamp(4.375rem, 8vw, 5.1875rem);
+  border: 0.0625rem solid #FFFFFF;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.button__icon {
+  position: absolute;
+  top: 50%;
+  left: 53%;
+  width: 0;
+  height: 0;
+  border-top: 0.9375rem solid transparent;
+  border-bottom: 0.9375rem solid transparent;
+  border-left: 1.5625rem solid #FFFFFF;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 43.75rem) {
+  .button {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=PlayButton.module.css.map */

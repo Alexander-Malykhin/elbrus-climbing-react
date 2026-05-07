@@ -1,0 +1,20 @@
+@use '../../../scss/settings/fonts' as *;
+@use '../../../scss/settings/colors' as *;
+@use '../../../scss/settings/functions' as *;
+
+.phone {
+  @include fz-16($fw-medium);
+
+  color: $white;
+  text-decoration: none;
+
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: rem(834)) {
+    padding-right: rem(30);
+  }
+}

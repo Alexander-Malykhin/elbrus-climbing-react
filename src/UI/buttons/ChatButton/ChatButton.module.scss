@@ -1,0 +1,24 @@
+@use '../../../scss/settings/fonts' as *;
+@use '../../../scss/settings/colors' as *;
+@use '../../../scss/settings/functions' as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: rem(20);
+  height: rem(20);
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (max-width: rem(700)) {
+    &__image {
+      content: url('../../../images/chat/chat-black.svg');
+    }
+  }
+}

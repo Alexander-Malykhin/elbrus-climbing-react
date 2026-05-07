@@ -1,0 +1,76 @@
+@use '../../scss/settings/fonts' as *;
+@use '../../scss/settings/colors' as *;
+@use '../../scss/settings/functions' as *;
+@use '../../scss/settings/mixins' as *;
+@use '../../scss/settings/containers' as *;
+
+.stats {
+  display: flex;
+  align-items: flex-end;
+  gap: rem(48);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+  }
+
+  &__value_desktop {
+    @include fz-40($fw-extra-bold);
+    color: $white;
+  }
+
+  &__value_desktop_text {
+    @include fz-16($fw-regular);
+  }
+
+  &__label_desktop {
+    @include fz-16($fw-regular);
+    color: $white;
+  }
+
+  &__value_mobile,
+  &__label_mobile {
+    display: none;
+  }
+
+  @media (max-width: rem($w_840)) {
+    &__item {
+      align-items: center;
+      justify-content: center;
+      gap: rem(2);
+      text-align: center;
+    }
+
+    &__value_desktop,
+    &__label_desktop {
+      display: none;
+    }
+
+    &__value_mobile,
+    &__label_mobile {
+      display: block;
+      color: $white;
+    }
+
+    &__value_mobile {
+      @include fz-18($fw-bold);
+    }
+
+    &__label_mobile {
+      @include fz-12($fw-regular);
+    }
+  }
+
+  @media (max-width: rem($w_700)) {
+    justify-content: space-between;
+    width: 100%;
+    height: rem(30);
+    gap: rem(1);
+
+    &__value_mobile,
+    &__label_mobile {
+      color: $gray;
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../../scss/settings/_fonts.scss","MainButton.module.scss","../../../scss/settings/_colors.scss","../../../scss/settings/_mixins.scss"],"names":[],"mappings":"AAEQ;ACGR;ED8BE,aA/BS;EAgCT,WA3BM;EA4BN,aAVW;EAWX,gBAJwD;EC1BxD;EACA,kBCNW;EDOX,OCVM;EDWN;EACA;;AAEA;EENA,YDJiB","file":"MainButton.module.css"}

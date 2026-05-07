@@ -1,0 +1,20 @@
+@use '../../../scss/settings/fonts' as *;
+@use '../../../scss/settings/colors' as *;
+@use '../../../scss/settings/functions' as *;
+
+.button {
+  @include fz-12($fw-regular);
+  width: rem(22);
+  height: rem(22);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: rem(1) solid $white;
+  border-radius: rem(4);
+
+  background: transparent;
+
+  color: $white;
+}
