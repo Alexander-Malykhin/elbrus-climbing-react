@@ -1,32 +1,17 @@
-.rating {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.25rem;
-  height: 3rem;
-}
-.rating__item {
-  display: block;
-  width: 0.6875rem;
-  border: 0.0625rem solid #FFFFFF;
-  border-radius: 0.09375rem;
-}
-.rating__item:nth-child(1) {
-  height: 0.6875rem;
-}
-.rating__item:nth-child(2) {
-  height: 1.25rem;
-}
-.rating__item:nth-child(3) {
-  height: 1.75rem;
-}
-.rating_level_1 .rating__item:nth-child(-n+1) {
-  background-color: #FFFFFF;
-}
-.rating_level_2 .rating__item:nth-child(-n+2) {
-  background-color: #FFFFFF;
-}
-.rating_level_3 .rating__item:nth-child(-n+3) {
-  background-color: #FFFFFF;
-}
+/* Error: 2 arguments required, but only 1 was passed.
+ *   ,
+ * 4 |   gap: rem(4);
+ *   |        ^^^^^^
+ *   '
+ *   RatingBars.module.scss 4:8  root stylesheet */
 
-/*# sourceMappingURL=RatingBars.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: 2 arguments required, but only 1 was passed.\a   \2577 \a 4 \2502    gap: rem(4);\d\a   \2502         ^^^^^^\a   \2575 \a   RatingBars.module.scss 4:8  root stylesheet";
+}

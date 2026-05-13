@@ -1,18 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-.button {
-  font-family: "Inter", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  width: 1.375rem;
-  height: 1.375rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0.0625rem solid #FFFFFF;
-  border-radius: 0.25rem;
-  background: transparent;
-  color: #FFFFFF;
-}
+/* Error: Undefined mixin.
+ *   ,
+ * 2 |   @include fz-12($fw-regular);
+ *   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   LanguageButton.module.scss 2:3  root stylesheet */
 
-/*# sourceMappingURL=LanguageButton.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502    @include fz-12($fw-regular);\d\a   \2502    ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   LanguageButton.module.scss 2:3  root stylesheet";
+}

@@ -1,20 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-.button__image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-@media (max-width: 43.75rem) {
-  .button__image {
-    content: url("../../../images/chat/chat-black.svg");
-  }
-}
+/* Error: 2 arguments required, but only 1 was passed.
+ *   ,
+ * 6 |   width: rem(20);
+ *   |          ^^^^^^^
+ *   '
+ *   ChatButton.module.scss 6:10  root stylesheet */
 
-/*# sourceMappingURL=ChatButton.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: 2 arguments required, but only 1 was passed.\a   \2577 \a 6 \2502    width: rem(20);\d\a   \2502           ^^^^^^^\a   \2575 \a   ChatButton.module.scss 6:10  root stylesheet";
+}

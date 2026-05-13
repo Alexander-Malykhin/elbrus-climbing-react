@@ -24,6 +24,20 @@ export default defineConfig({
     },
   },
 
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @use "@scss/settings/fonts" as *;
+          @use "@scss/settings/colors" as *;
+          @use "@scss/settings/functions" as *;
+          @use "@scss/settings/mixins" as *;
+          @use "@scss/settings/containers" as *;
+        `,
+      },
+    },
+  },
+
   build: {
     outDir: '../local/react-app',
     emptyOutDir: true,

@@ -1,76 +1,117 @@
-@use '../../scss/settings/fonts' as *;
-@use '../../scss/settings/colors' as *;
-@use '../../scss/settings/functions' as *;
-@use '../../scss/settings/mixins' as *;
-@use '../../scss/settings/containers' as *;
-
 .stats {
   display: flex;
-  align-items: flex-end;
-  gap: rem(48);
 
   &__item {
     display: flex;
     flex-direction: column;
-    gap: rem(10);
   }
 
-  &__value_desktop {
-    @include fz-40($fw-extra-bold);
-    color: $white;
+  &__unit {
+    margin-left: rem(6);
   }
 
-  &__value_desktop_text {
-    @include fz-16($fw-regular);
-  }
-
-  &__label_desktop {
-    @include fz-16($fw-regular);
-    color: $white;
-  }
-
-  &__value_mobile,
-  &__label_mobile {
+  &__mobile_value,
+  &__mobile_label {
     display: none;
   }
 
-  @media (max-width: rem($w_840)) {
-    &__item {
+  &_hero {
+    align-items: flex-end;
+    gap: rem(48);
+
+    .stats__item {
+      gap: rem(10);
+    }
+
+    .stats__value {
+      @include fz-40($fw-extra-bold);
+      color: $white;
+    }
+
+    .stats__unit {
+      @include fz-16($fw-regular);
+    }
+
+    .stats__label {
+      @include fz-16($fw-regular);
+      color: $white;
+    }
+  }
+
+  &_card {
+    justify-content: space-between;
+    width: 100%;
+
+    .stats__item {
       align-items: center;
-      justify-content: center;
       gap: rem(2);
       text-align: center;
     }
 
-    &__value_desktop,
-    &__label_desktop {
+    .stats__value,
+    .stats__label {
       display: none;
     }
 
-    &__value_mobile,
-    &__label_mobile {
+    .stats__mobile_value,
+    .stats__mobile_label {
       display: block;
-      color: $white;
+      color: $gray;
     }
 
-    &__value_mobile {
+    .stats__mobile_value {
       @include fz-18($fw-bold);
     }
 
-    &__label_mobile {
+    .stats__mobile_label {
       @include fz-12($fw-regular);
     }
   }
 
-  @media (max-width: rem($w_700)) {
-    justify-content: space-between;
-    width: 100%;
-    height: rem(30);
-    gap: rem(1);
+  @media (max-width: rem($w_840)) {
+    &_hero {
+      .stats__item {
+        align-items: center;
+        gap: rem(2);
+        text-align: center;
+      }
 
-    &__value_mobile,
-    &__label_mobile {
-      color: $gray;
+      .stats__value,
+      .stats__label {
+        display: none;
+      }
+
+      .stats__mobile_value,
+      .stats__mobile_label {
+        display: block;
+        color: $white;
+      }
+
+      .stats__mobile_value {
+        @include fz-18($fw-bold);
+      }
+
+      .stats__mobile_label {
+        @include fz-12($fw-regular);
+      }
+
+      .stats__rating {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: rem($w_700)) {
+    &_hero {
+      justify-content: space-between;
+      width: 100%;
+      height: rem(30);
+      gap: rem(1);
+
+      .stats__mobile_value,
+      .stats__mobile_label {
+        color: $gray;
+      }
     }
   }
 }

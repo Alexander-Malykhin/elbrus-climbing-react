@@ -1,0 +1,19 @@
+.line {
+  --current: 1;
+  --total: 9;
+
+  width: rem(162);
+  height: rem(2);
+  background-color: $white-light;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: calc(100% / var(--total) * var(--current));
+    background-color: $red;
+  }
+}

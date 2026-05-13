@@ -1,12 +1,15 @@
-// components/header/Header.tsx
-import HeaderTop from './sections/HeaderTop/HeaderTop.tsx'
-import HeaderMiddle from './sections/HeaderMiddle/HeaderMiddle.tsx'
-import HeaderBottom from './sections/HeaderBottom/HeaderBottom.tsx'
+//styles
+import styles from './Header.module.scss';
+//sections
+import HeaderTop from "@components/Header/sections/HeaderTop/HeaderTop.tsx";
+import HeaderMiddle from "@components/Header/sections/HeaderMiddle/HeaderMiddle.tsx";
+import HeaderBottom from "@components/Header/sections/HeaderBottom/HeaderBottom.tsx";
+//layout
 import MainLayout from "@layouts/MainLayout/MainLayout.tsx";
 
 const Header = () => {
     return (
-        <header className="header">
+        <header className={styles.header}>
             <MainLayout>
                 <HeaderTop />
                 <HeaderMiddle />

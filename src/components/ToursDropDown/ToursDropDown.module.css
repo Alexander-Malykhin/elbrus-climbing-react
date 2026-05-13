@@ -1,96 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-.tours {
-  position: relative;
-}
-.tours__dropdown {
-  position: absolute;
-  top: calc(100% + 1.375rem);
-  left: 0;
-  z-index: 50;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(0.5rem);
-  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
-}
-.tours__dropdown_open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.tours__categories, .tours__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  background: #FFFFFF;
-}
-.tours__categories {
-  width: 10.625rem;
-}
-.tours__item {
-  position: relative;
-}
-.tours__category {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0 0.9375rem;
-  border: 0;
-  border-bottom: 0.0625rem solid rgba(126, 134, 154, 0.25);
-  background: #FFFFFF;
-  color: #222222;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-.tours__category__arrow {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-right: 0.125rem solid currentColor;
-  border-bottom: 0.125rem solid currentColor;
-  transform: rotate(45deg);
-  transition: transform 0.25s ease;
-}
-.tours__category:hover {
-  color: #4DD2A3;
-}
-.tours__category_active {
-  color: #4DD2A3;
-}
-.tours__category_active .tours__category__arrow {
-  transform: rotate(-45deg);
-}
-.tours__content {
-  position: absolute;
-  left: calc(100% + 0.25rem);
-  top: 0;
-  width: 18.75rem;
-  background: #FFFFFF;
-}
-.tours__list {
-  display: block;
-}
-.tours__list_item {
-  border-bottom: 0.0625rem solid rgba(126, 134, 154, 0.25);
-}
-.tours__list_link {
-  display: flex;
-  align-items: center;
-  min-height: 2.75rem;
-  padding: 0 1.25rem;
-  color: #222222;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-.tours__list_link:hover {
-  color: #4DD2A3;
-}
-@media (max-width: 52.5rem) {
-  .tours {
-    display: none;
-  }
-}
+/* Error: 2 arguments required, but only 1 was passed.
+ *   ,
+ * 6 |     top: calc(100% + #{rem(22)});
+ *   |                        ^^^^^^^
+ *   '
+ *   ToursDropDown.module.scss 6:24  root stylesheet */
 
-/*# sourceMappingURL=ToursDropDown.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: 2 arguments required, but only 1 was passed.\a   \2577 \a 6 \2502      top: calc(100% + #{rem(22)});\d\a   \2502                         ^^^^^^^\a   \2575 \a   ToursDropDown.module.scss 6:24  root stylesheet";
+}

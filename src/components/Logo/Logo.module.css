@@ -1,17 +1,17 @@
-.logo {
-  display: block;
-  width: clamp(3.75rem, 10vw, 6.25rem);
-  flex-shrink: 0;
-}
-.logo_link {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-@media (max-width: 43.75rem) {
-  .logo {
-    content: url("../../images/logo/logo-black.svg");
-  }
-}
+/* Error: 2 arguments required, but only 1 was passed.
+ *   ,
+ * 3 |   width: clamp(rem(60), 10vw, rem(100));
+ *   |                ^^^^^^^
+ *   '
+ *   Logo.module.scss 3:16  root stylesheet */
 
-/*# sourceMappingURL=Logo.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: 2 arguments required, but only 1 was passed.\a   \2577 \a 3 \2502    width: clamp(rem(60), 10vw, rem(100));\d\a   \2502                 ^^^^^^^\a   \2575 \a   Logo.module.scss 3:16  root stylesheet";
+}

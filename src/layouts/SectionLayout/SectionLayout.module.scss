@@ -1,0 +1,9 @@
+.section {
+  background-color: $white;
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+}

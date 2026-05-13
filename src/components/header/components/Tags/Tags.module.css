@@ -1,34 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-.tags {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.tags__item {
-  font-family: "Inter", sans-serif;
-  font-size: 0.75rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  padding: 0.15625rem 0.53125rem;
-  border: 0.0625rem solid #FFFFFF;
-  border-radius: 0.25rem;
-  color: #FFFFFF;
-}
-@media (max-width: 43.75rem) {
-  .tags {
-    order: 2;
-    gap: 0.625rem;
-    margin-top: 0.375rem;
-  }
-  .tags__item {
-    color: #7E869A;
-    border-color: #7E869A;
-  }
-}
-@media (max-width: 20rem) {
-  .tags {
-    display: none;
-  }
-}
+/* Error: 2 arguments required, but only 1 was passed.
+ *   ,
+ * 4 |   gap: rem(24);
+ *   |        ^^^^^^^
+ *   '
+ *   Tags.module.scss 4:8  root stylesheet */
 
-/*# sourceMappingURL=Tags.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: 2 arguments required, but only 1 was passed.\a   \2577 \a 4 \2502    gap: rem(24);\d\a   \2502         ^^^^^^^\a   \2575 \a   Tags.module.scss 4:8  root stylesheet";
+}

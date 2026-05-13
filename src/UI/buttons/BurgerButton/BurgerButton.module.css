@@ -1,24 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-.button {
-  display: none;
-}
-.button__line {
-  height: 0.0625rem;
-  background: #FFFFFF;
-}
-@media (max-width: 52.125rem) {
-  .button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 1.875rem;
-    height: 1.125rem;
-  }
-}
-@media (max-width: 43.75rem) {
-  .button__line {
-    background: #222222;
-  }
-}
+/* Error: 2 arguments required, but only 1 was passed.
+ *   ,
+ * 5 |     height: rem(1);
+ *   |             ^^^^^^
+ *   '
+ *   BurgerButton.module.scss 5:13  root stylesheet */
 
-/*# sourceMappingURL=BurgerButton.module.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: 2 arguments required, but only 1 was passed.\a   \2577 \a 5 \2502      height: rem(1);\d\a   \2502              ^^^^^^\a   \2575 \a   BurgerButton.module.scss 5:13  root stylesheet";
+}
