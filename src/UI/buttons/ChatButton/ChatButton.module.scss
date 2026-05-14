@@ -12,7 +12,7 @@
     object-fit: contain;
   }
 
-  @media (max-width: rem(700)) {
+  @media (max-width: rem($mobile)) {
     &__image {
       content: url('../../../images/chat/chat-black.svg');
     }

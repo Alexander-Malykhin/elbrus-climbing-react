@@ -585,21 +585,4 @@ body.is-modal-open {
   font-family: "Inter", sans-serif;
 }
 
-.page {
-  margin: 5rem 0;
-}
-
-.elements-visible {
-  opacity: 0;
-}
-
-@media (max-width: 43.75rem) {
-  .elements-display {
-    display: none;
-  }
-  .page {
-    margin: 1.25rem 0;
-  }
-}
-
 /*# sourceMappingURL=main.css.map */

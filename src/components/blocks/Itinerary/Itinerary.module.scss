@@ -1,0 +1,42 @@
+.itinerary {
+
+  &__content {
+    max-width: rem(1040);
+    margin: 0 auto;
+  }
+
+  &__head {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-bottom: rem(12);
+    padding: 0 rem(35);
+  }
+
+  &__item__active {
+    .itinerary__arrow::before {
+      transform: rotate(-135deg);
+      top: rem(6);
+    }
+  }
+
+  @media (max-width: rem(900)) {
+    &__head {
+      justify-content: flex-start;
+      padding: 0;
+      margin-bottom: rem(8);
+    }
+  }
+
+  @media (max-width: rem(700)) {
+    &__head {
+      display: none;
+    }
+
+    &__content {
+      max-width: none;
+      margin: 0;
+      overflow: hidden;
+    }
+  }
+}

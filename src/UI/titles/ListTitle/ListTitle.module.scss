@@ -1,0 +1,22 @@
+.title {
+  @include title-md;
+
+  margin: 0;
+  text-transform: uppercase;
+
+  &_gray {
+    color: $gray;
+  }
+
+  &_green {
+    color: $main-green;
+  }
+
+  &_red {
+    color: $red;
+  }
+
+  &_black {
+    color: $black;
+  }
+}

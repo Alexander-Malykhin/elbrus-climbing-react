@@ -1,0 +1,15 @@
+.reviews {
+  &__content {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}

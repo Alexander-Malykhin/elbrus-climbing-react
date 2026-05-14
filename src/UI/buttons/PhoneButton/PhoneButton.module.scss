@@ -10,7 +10,7 @@
     opacity: 0.85;
   }
 
-  @media (max-width: rem(834)) {
+  @media (max-width: rem($tablet)) {
     padding-right: rem(30);
   }
 }

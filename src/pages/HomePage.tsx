@@ -1,17 +1,17 @@
 //header
-import Header from "@components/Header/Header.tsx";
+import Header from "@components/blocks/Header/Header.tsx";
 //blocks
 import TourNavigation from "@components/TourNavigation/TourNavigation.tsx";
-import Program from "@components/Program/Program.tsx";
-import Features from "@components/Features/Features.tsx";
-import TripPhotos from "@components/TripPhotos/TripPhotos.tsx";
-import Itinerary from "@components/Itinerary/Itinerary.tsx";
-import Cost from "@components/Cost/Cost.tsx";
-import Departures from "@components/Departures/Departures.tsx";
-import Information from "@components/Information/Information.tsx";
-import Reviews from "@components/Reviews/Reviews.tsx";
-import More from "@components/More/More.tsx";
-import Footer from "@components/Footer/Footer.tsx";
+import Program from "@components/blocks/Program/Program.tsx";
+import Features from "@components/blocks/Features/Features.tsx";
+import TripPhotos from "@components/blocks/TripPhotos/TripPhotos.tsx";
+import Itinerary from "@components/blocks/Itinerary/Itinerary.tsx";
+import Cost from "@components/blocks/Cost/Cost.tsx";
+import Departures from "@components/blocks/Departures/Departures.tsx";
+import Information from "@components/blocks/Information/Information.tsx";
+import Reviews from "@components/blocks/Reviews/Reviews.tsx";
+import More from "@components/blocks/More/More.tsx";
+import Footer from "@components/blocks/Footer/Footer.tsx";
 
 const HomePage = () => {
     return (

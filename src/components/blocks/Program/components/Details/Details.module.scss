@@ -1,0 +1,33 @@
+.details {
+  display: none;
+  flex-direction: column;
+  gap: rem(16);
+
+  padding: rem(24);
+
+  border-radius: rem(4);
+  background-color: $gray-light;
+
+  &__text {
+    @include text-base;
+
+    margin: 0;
+    max-width: rem(350);
+
+    color: $black;
+  }
+
+  &__accent {
+    @include text-base;
+
+    color: $gray;
+  }
+
+  @media (max-width: rem($tablet)) {
+    display: flex;
+  }
+
+  @media (max-width: rem($mobile-x)) {
+    display: none;
+  }
+}

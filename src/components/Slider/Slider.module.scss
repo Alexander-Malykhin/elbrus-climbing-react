@@ -1,0 +1,82 @@
+.slider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: rem(20) rem(58);
+  overflow: hidden;
+
+  &__track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: rem(288);
+    justify-content: start;
+    align-items: stretch;
+    gap: rem(8);
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    padding: rem(16) 0 rem(28);
+    margin: rem(-16) 0 rem(-28);
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    width: rem(40);
+    height: rem(40);
+    border: rem(1) solid $red;
+    border-radius: 50%;
+    background: $white;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: rem(8);
+      height: rem(8);
+      border-right: rem(1) solid $red;
+      border-bottom: rem(1) solid $red;
+    }
+
+    &__prev {
+      left: 0;
+
+      &::before {
+        transform: translate(-35%, -50%) rotate(135deg);
+      }
+    }
+
+    &__next {
+      right: 0;
+
+      &::before {
+        transform: translate(-65%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  @media (max-width: rem(900)) {
+    padding: rem(8) 0;
+
+    &__track {
+      grid-auto-columns: minmax(rem(288), rem(300));
+      padding: rem(10) 0 rem(16);
+      margin: 0;
+    }
+
+    &__arrow {
+      display: none;
+    }
+  }
+}

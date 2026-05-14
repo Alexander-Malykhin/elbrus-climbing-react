@@ -1,0 +1,32 @@
+.tags {
+  display: flex;
+  align-items: center;
+  gap: rem(24);
+
+  &__item {
+    @include fz-12($fw-regular);
+
+    padding: rem(2.5) rem(8.5);
+
+    border: rem(1) solid $white;
+    border-radius: rem(4);
+
+    color: $white;
+  }
+
+  @media (max-width: rem($mobile)) {
+    order: 2;
+
+    gap: rem(10);
+    margin-top: rem(6);
+
+    &__item {
+      color: $gray;
+      border-color: $gray;
+    }
+  }
+
+  @media (max-width: rem($mobile-l)) {
+    display: none;
+  }
+}

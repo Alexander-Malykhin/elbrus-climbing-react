@@ -1,0 +1,18 @@
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(rem(300), rem(570)));
+  gap: rem(80);
+  align-items: flex-start;
+  justify-content: space-between;
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    gap: rem(28);
+  }
+
+  @media (max-width: rem(900)) {
+    grid-template-columns: 1fr;
+    gap: rem(28);
+  }
+}

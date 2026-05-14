@@ -1,0 +1,68 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: rem(12);
+
+    text-transform: uppercase;
+    color: $gray;
+  }
+
+  &__icon {
+    width: rem(20);
+    height: rem(20);
+    flex: 0 0 rem(20);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(8);
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &_green {
+      .block__line::before {
+        background-color: $main-green;
+      }
+    }
+
+    &_red {
+      .block__line::before {
+        background-color: $red;
+      }
+    }
+  }
+
+  &__line {
+    @include text-base;
+
+    display: block;
+    color: $black;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: rem(14);
+      height: rem(1);
+      margin-right: rem(8);
+      margin-bottom: rem(4);
+    }
+  }
+
+  &__lineText {
+    display: inline;
+  }
+
+  @media (max-width: rem(900)) {
+    padding: rem(10) rem(12);
+    background: $white;
+    box-shadow: 0 rem(8) rem(20) rgba($black, 0.06);
+  }
+}

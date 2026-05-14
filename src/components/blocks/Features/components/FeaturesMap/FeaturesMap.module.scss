@@ -1,0 +1,17 @@
+.map {
+  width: rem(435);
+  height: rem(284);
+  flex-shrink: 0;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: rem(4);
+  }
+
+  @media (max-width: rem($tablet)) {
+    display: none;
+  }
+}

@@ -1,0 +1,20 @@
+.list {
+  @include layout-list;
+
+  @media (max-width: rem(700)) {
+    &__list {
+      display: flex;
+      flex-direction: row;
+      gap: rem(8);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: rem(8);
+
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

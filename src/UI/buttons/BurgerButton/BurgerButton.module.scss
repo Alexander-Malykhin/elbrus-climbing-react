@@ -6,7 +6,7 @@
     background: $white;
   }
 
-  @media (max-width: rem(834)) {
+  @media (max-width: rem($tablet)) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,7 +15,7 @@
     height: rem(18);
   }
 
-  @media (max-width: rem(700)) {
+  @media (max-width: rem($mobile)) {
     &__line {
       background: $black;
     }

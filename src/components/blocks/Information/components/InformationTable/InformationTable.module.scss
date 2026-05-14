@@ -1,0 +1,36 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  max-width: rem(1130);
+
+  &__row {
+    display: grid;
+    grid-template-columns: rem(80) rem(180) minmax(0, rem(740));
+    column-gap: rem(28);
+    align-items: start;
+    padding: rem(10) 0;
+    border-bottom: rem(1) solid rgba($gray, 0.25);
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__price,
+  &__name,
+  &__text {
+    @include text-base;
+  }
+
+  &__text {
+    color: $gray;
+  }
+
+  @media (max-width: rem(900)) {
+    &__row {
+      grid-template-columns: 1fr;
+      gap: rem(2);
+      padding: rem(8) 0;
+    }
+  }
+}

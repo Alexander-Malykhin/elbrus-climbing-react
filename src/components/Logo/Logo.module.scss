@@ -3,13 +3,25 @@
   width: clamp(rem(60), 10vw, rem(100));
   flex-shrink: 0;
 
-  &_link {
+  &__image {
     display: block;
     width: 100%;
     height: auto;
+
+    &_black {
+      display: none;
+    }
   }
 
-  @media (max-width: rem(700)) {
-    content: url('../../images/logo/logo-black.svg');
+  @media (max-width: rem($mobile)) {
+    &__image {
+      &_white {
+        display: none;
+      }
+
+      &_black {
+        display: block;
+      }
+    }
   }
 }

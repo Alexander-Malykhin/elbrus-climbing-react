@@ -1,0 +1,42 @@
+.messengers {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: rem(46);
+
+  &__text {
+    @include fz-16($fw-medium);
+
+    max-width: rem(54);
+
+    color: $white;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(40);
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: rem(31);
+    height: rem(31);
+  }
+
+  &__icon {
+    display: block;
+
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: rem($mobile)) {
+    display: none;
+  }
+}

@@ -1,0 +1,19 @@
+.bottom {
+  display: block;
+
+  @media (max-width: rem($tablet)) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: rem(16);
+
+    &__information {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: rem($mobile-x)) {
+    grid-template-columns: 1fr;
+  }
+}

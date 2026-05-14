@@ -1,0 +1,23 @@
+.list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: rem(10);
+
+  &__icon {
+    display: inline-block;
+    width: rem(30);
+    height: rem(30);
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media (max-width: rem($tablet)) {
+    flex-direction: column;
+    gap: rem(40);
+  }
+}
