@@ -11,21 +11,8 @@
     gap: rem(16);
   }
 
-  &__title {
-    @include title-md;
-
-    margin: 0;
+  &__wrapper {
     padding-top: rem(8);
-
-    color: $gray;
-    text-transform: uppercase;
-  }
-
-  &__text {
-    @include text-base;
-
-    margin: 0;
-    color: $black;
   }
 
   @media (max-width: rem($tablet)) {

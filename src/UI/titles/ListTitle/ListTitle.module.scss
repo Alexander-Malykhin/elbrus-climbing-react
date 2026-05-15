@@ -19,4 +19,12 @@
   &_black {
     color: $black;
   }
+
+  @media (max-width: rem($mobile)) {
+    @include title-ml;
+  }
+
+  @media (max-width: rem($mobile-l)) {
+    @include title-ml;
+  }
 }

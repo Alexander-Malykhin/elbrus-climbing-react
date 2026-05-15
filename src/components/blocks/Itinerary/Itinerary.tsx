@@ -1,23 +1,24 @@
-import {useState} from "react";
-//styles
+import { useRef, useState } from 'react';
+// styles
 import styles from './Itinerary.module.scss';
-//layouts
-import MainLayout from "@layouts/MainLayout/MainLayout.tsx";
-import SectionLayout from "@layouts/SectionLayout/SectionLayout.tsx";
-//components
-import SectionLine from "@components/SectionLine/SectionLine.tsx";
-import ItineraryList from "@components/blocks/Itinerary/components/ItineraryList/ItineraryList.tsx";
-import ItineraryButtonList from "@components/blocks/Itinerary/components/ItineraryButtonList/ItineraryButtonList.tsx";
-//UI
-import SectionTitle from "@UI/titles/SectionTitle/SectionTitle.tsx";
+// layouts
+import MainLayout from '@layouts/MainLayout/MainLayout.tsx';
+import SectionLayout from '@layouts/SectionLayout/SectionLayout.tsx';
+// components
+import SectionLine from '@components/SectionLine/SectionLine.tsx';
+// UI
+import SectionTitle from '@UI/titles/SectionTitle/SectionTitle.tsx';
+// assets
+import ArrowRightIcon from '@images/assets/arrow-right.svg';
 
 type ItineraryListType = {
-    id: number
-    title: string,
-    description: string
-}
+    id: number;
+    title: string;
+    description: string;
+};
 
 const Itinerary = () => {
+    const listRef = useRef<HTMLDivElement | null>(null);
 
     const list: ItineraryListType[] = [
         {
@@ -67,50 +68,110 @@ const Itinerary = () => {
         }
     ];
 
-    const [openedItems, setOpenedItems] = useState<number[]>(
-        list.map(item => item.id)
-    );
+    const [openItems, setOpenItems] = useState<number[]>(list.map((item) => item.id));
 
-    const isAllOpen = openedItems.length === list.length;
+    const isAllOpen = openItems.length === list.length;
 
-    const toggleAllItems = () => {
-        if (isAllOpen)
-            setOpenedItems([]);
-        else
-            setOpenedItems(list.map(item => item.id));
+    const toggleAll = () => {
+        setOpenItems(isAllOpen ? [] : list.map((item) => item.id));
     };
 
     const toggleItem = (id: number) => {
-        setOpenedItems(prev =>
+        setOpenItems((prev) =>
             prev.includes(id)
-                ? prev.filter(itemId => itemId !== id)
+                ? prev.filter((itemId) => itemId !== id)
                 : [...prev, id]
         );
+    };
+
+    const scrollToNextCard = () => {
+        const listElement = listRef.current;
+
+        if (!listElement) return;
+
+        const cardElement = listElement.querySelector(`.${styles.itinerary__item}`);
+
+        if (!cardElement) return;
+
+        const cardWidth = cardElement.getBoundingClientRect().width;
+        const gap = 8;
+
+        listElement.scrollBy({
+            left: cardWidth + gap,
+            behavior: 'smooth',
+        });
+    };
+
+    const handleArrowClick = (id: number) => {
+        const isMobile = window.matchMedia('(max-width: 700px)').matches;
+
+        if (isMobile) {
+            scrollToNextCard();
+            return;
+        }
+
+        toggleItem(id);
     };
 
     return (
         <MainLayout>
             <SectionLayout className={styles.itinerary}>
-                <SectionLine
-                    current={4}
-                    total={9}
-                />
+                <SectionLine current={4} total={9} />
+
                 <SectionTitle>
                     Описание по дням
                 </SectionTitle>
-                <div className={styles.itinerary__content}>
-                    <div className={styles.itinerary__head}>
-                        <ItineraryButtonList
-                            isAllOpen={isAllOpen}
-                            onClick={toggleAllItems}
-                        />
-                    </div>
 
-                    <ItineraryList
-                        list={list}
-                        openedItems={openedItems}
-                        onToggleItem={toggleItem}
-                    />
+                <div className={styles.itinerary__content}>
+                    <button
+                        className={styles.itinerary__button}
+                        type="button"
+                        onClick={toggleAll}
+                    >
+                        {isAllOpen ? 'Свернуть' : 'Раскрыть все дни'}
+                    </button>
+
+                    <div className={styles.itinerary__list} ref={listRef}>
+                        {list.map((item) => {
+                            const isOpen = openItems.includes(item.id);
+
+                            return (
+                                <article
+                                    className={`${styles.itinerary__item} ${
+                                        isOpen ? styles.itinerary__item_open : ''
+                                    }`}
+                                    key={item.id}
+                                >
+                                    <div className={styles.itinerary__item_day}>
+                                        <p className={styles.itinerary__item_text}>
+                                            День {item.id}
+                                        </p>
+                                    </div>
+
+                                    <div className={styles.itinerary__item_content}>
+                                        <h3 className={styles.itinerary__item_title}>
+                                            <span>День {item.id}.</span> {item.title}
+                                        </h3>
+
+                                        <div className={styles.itinerary__item_wrapper}>
+                                            <p className={styles.itinerary__item_text}>
+                                                {item.description}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        className={styles.itinerary__item_arrow}
+                                        type="button"
+                                        aria-label={`День ${item.id}`}
+                                        onClick={() => handleArrowClick(item.id)}
+                                    >
+                                        <img src={ArrowRightIcon} alt="" aria-hidden="true" />
+                                    </button>
+                                </article>
+                            );
+                        })}
+                    </div>
                 </div>
             </SectionLayout>
         </MainLayout>

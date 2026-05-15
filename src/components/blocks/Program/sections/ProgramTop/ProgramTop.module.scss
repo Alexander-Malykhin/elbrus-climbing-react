@@ -5,25 +5,25 @@
   align-items: flex-start;
   justify-content: space-between;
 
-  &__details, &__actions {
+  &__details {
     display: flex;
     flex-direction: column;
     gap: rem(16);
+  }
+
+  &__actions {
+    background: $gray-light;
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+    padding:rem(24);
+    border-radius:rem(4);
   }
 
   &__description {
     display: flex;
     flex-direction: column;
     gap: rem(24);
-
-    &_text {
-      @include text-base;
-      line-height: 1.4;
-
-      &__accent {
-        @include green-accent;
-      }
-    }
   }
 
   @media (max-width: rem($tablet)) {

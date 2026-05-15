@@ -86,9 +86,16 @@ $fw-extra-bold: 800;
   @include fz-20($fw-regular);
 }
 
+@mixin title-lm {
+  @include fz-20($fw-semi-bold);
+}
 
 @mixin title-md {
   @include fz-16($fw-semi-bold);
+}
+
+@mixin title-ml {
+  @include fz-14($fw-semi-bold);
 }
 
 @mixin text-base {
@@ -97,6 +104,10 @@ $fw-extra-bold: 800;
 
 @mixin text-medium {
   @include fz-16($fw-medium);
+}
+
+@mixin text-lm {
+  @include fz-14($fw-regular);
 }
 
 @mixin text-sm {

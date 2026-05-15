@@ -1,5 +1,7 @@
 // styles
 import styles from './ProgramInfoItem.module.scss';
+import Text from "@UI/typography/Text/Text.tsx";
+import ListTitle from "@UI/titles/ListTitle/ListTitle.tsx";
 
 type ProgramInfoItemProps = {
     title: string;
@@ -14,10 +16,14 @@ const ProgramInfoItem = ({ title, text, icon, children }: ProgramInfoItemProps) 
             <div className={styles.item__header}>
                 {icon}
 
-                <h3 className={styles.item__title}>{title}</h3>
+                <div className={styles.item__wrapper}>
+                    <ListTitle color={'gray'}>
+                        {title}
+                    </ListTitle>
+                </div>
             </div>
 
-            <p className={styles.item__text}>{text}</p>
+            <Text typography={'base'}>{text}</Text>
 
             {children}
         </article>

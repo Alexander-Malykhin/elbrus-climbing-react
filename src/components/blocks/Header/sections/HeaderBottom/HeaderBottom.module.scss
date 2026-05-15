@@ -14,12 +14,6 @@
 
   &__text {
     max-width: 100%;
-
-    color: $white;
-  }
-
-  &__text_accent {
-    color: $main-green;
   }
 
   @media (max-width: rem($desktop-l)) {

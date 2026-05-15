@@ -2,8 +2,10 @@
 import styles from './HeaderBottom.module.scss'
 //components
 import Stats from '@components/Stats/Stats.tsx'
-//button
+//UI
 import MainButton from '@UI/buttons/MainButton/MainButton.tsx';
+import Text from "@UI/typography/Text/Text.tsx";
+import TextAccent from "@UI/typography/TextAccent/TextAccent.tsx";
 
 const HeaderBottom = () => {
     return (
@@ -16,17 +18,11 @@ const HeaderBottom = () => {
             />
 
             <div className={styles.bottom__information}>
-                <p className={styles.bottom__text}>
-                    18.08.2022,{' '}
-                    <span className={styles.bottom__text_accent}>
-                        каждую пятницу
-                    </span>{' '}
-                    и {' '}
-                    <span className={styles.bottom__text_accent}>
-                        под заказ
-                    </span>{' '}
-                    — от 78 000 ₽
-                </p>
+                <div className={styles.bottom__text}>
+                    <Text typography={'base'} color={'white'}>
+                        18.08.2022, <TextAccent color={'green'}>каждую пятницу</TextAccent> и под заказ — от 78 000 ₽
+                    </Text>
+                </div>
 
                 <MainButton />
             </div>
